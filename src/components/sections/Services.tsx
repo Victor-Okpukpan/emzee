@@ -16,14 +16,14 @@ export default function Services() {
                 Public Relations
               </p>
 
-              <p className="text-xl text-[#200123]">
+              <p className="md:text-xl text-base text-[#200123]">
                 Ezeemedia specializes in strategic communications for clients in
                 the web3, crypto, fintech, blockchain, and emerging technology
                 industries. Our deep understanding of the media landscape helps
                 us assist clients in building strong brands, sharing their
                 messages, and reaching their goals.
               </p>
-              <p className="text-xl mt-8 text-[#200123]">
+              <p className="md:text-xl text-base mt-8 text-[#200123]">
                 In addition to traditional PR tactics, we also offer a range of
                 digital marketing services to further amplify our clients&apos;
                 messages. From social media management to content creation and
@@ -46,13 +46,13 @@ export default function Services() {
             <div className="flex-1">
               <p className="text-[#200123] font-semibold text-2xl mb-3">Marketing</p>
 
-              <p className="text-xl text-[#200123]">
+              <p className="md:text-xl text-base text-[#200123]">
                 At Ezeemedia, we understand the importance of marketing and how
                 it is key to the success of your web3 brand. We implement
                 intelligent and sustainable marketing strategies anchored by
                 best practices to achieve tangible success.
               </p>
-              <p className="text-xl text-[#200123]">
+              <p className="md:text-xl text-base mt-8 text-[#200123]">
                 We believe that data-driven marketing techniques, understanding
                 your audience, creating engaging and creative content, and
                 building loyal communities are all essential components that
