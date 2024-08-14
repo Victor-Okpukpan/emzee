@@ -40,7 +40,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={polysansTrial.className}>
-        <Navbar />
         {children}
       </body>
     </html>

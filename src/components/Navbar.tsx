@@ -5,7 +5,7 @@ import BookNow from "./buttons/BookNow";
 import Wrapper from "./Wrapper";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"; // Import icons
 
-export default function Navbar() {
+export default function Navbar({ scrolled }: { scrolled: boolean }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -13,7 +13,11 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed backdrop-blur-lg z-50 top-0 left-0 right-0">
+    <nav
+      className={`fixed backdrop-blur-lg z-50 top-0 left-0 right-0 transition-colors duration-300 ${
+        scrolled ? "bg-gray-900" : "bg-transparent"
+      }`}
+    >
       <Wrapper>
         <div className="flex py-8 items-center justify-between">
           {/* Logo */}
@@ -49,7 +53,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {menuOpen && (
-          <div className="fixed right-0 left-0 bg-white text-black flex flex-col justify-center items-center space-y-8 z-40">
+          <div className="fixed right-0 left-0 bg-gray-900 text-white flex flex-col justify-center items-center space-y-8 z-40">
             <button className="text-black text-2xl">About Us</button>
             <button className="text-black text-2xl">Blog</button>
             <button className="text-black text-2xl">Services</button>
