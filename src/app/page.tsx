@@ -5,6 +5,7 @@ import Achievements from "@/components/sections/Achievements";
 import { FAQ } from "@/components/sections/FAQ";
 import Hero from "@/components/sections/Hero";
 import Partners from "@/components/sections/Partners";
+import Services from "@/components/sections/Services";
 import Specialty from "@/components/sections/Specialty";
 import Testimonials from "@/components/sections/Testimonials";
 import { useState, useEffect } from "react";
@@ -42,6 +43,7 @@ export default function Home() {
       <Achievements />
       <Testimonials />
       <Partners />
+      <Services />
       <Specialty />
       <FAQ />
       <Footer />
