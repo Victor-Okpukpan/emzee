@@ -10,8 +10,11 @@ export default function Hero() {
         autoPlay
         muted
         loop
-        className="w-full md:h-full min-h-screen"
+        className="w-full hidden md:block md:h-full min-h-screen"
       />
+      <div style={{
+        backgroundImage: "url('/placeholder.svg')"
+      }} className="bg-no-repeat bg-cover md:hidden min-h-screen"></div>
 
       <div
         style={{
