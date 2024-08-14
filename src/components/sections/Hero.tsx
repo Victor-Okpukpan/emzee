@@ -5,26 +5,24 @@ import Video from "next-video";
 export default function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden">
-      <div className="absolute inset-0">
-        {/* <Video
-          src="/videos/video.mp4"
-          autoPlay
-          muted
-          loop
-          className="w-full h-full object-cover"
-        /> */}
-        
-      </div>
+      <Video
+        src="/videos/video.mp4"
+        autoPlay
+        muted
+        loop
+        className="w-full md:h-full min-h-screen"
+      />
+
       <div
         style={{
           background:
             "linear-gradient(180deg, rgba(75, 29, 140, 0.5) 100%, rgba(20, 8, 38, 0.2) 0%)",
         }}
-        className="absolute inset-0 z-20 flex items-center justify-center"
+        className="h-full absolute top-0 right-0 left-0 z-20"
       >
         <Wrapper>
-          <div className="flex flex-col items-start justify-center h-full">
-            <h1 className="text-white mb-8 font-semibold text-4xl sm:text-5xl md:text-6xl leading-tight sm:leading-snug md:leading-relaxed">
+          <div className="flex flex-col items-start h-full justify-center">
+            <h1 className="text-white text-4xl mb-8 font-semibold md:text-5xl">
               Driving Brands and
               <br />
               Businesses to the
