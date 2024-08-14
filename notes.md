@@ -3,16 +3,6 @@ import { useState } from "react";
 import Image from "next/image";
 import BookNow from "./buttons/BookNow";
 import Wrapper from "./Wrapper";
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetDescription,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"; // Import icons
 
 export default function Navbar({ scrolled }: { scrolled: boolean }) {
@@ -42,20 +32,13 @@ export default function Navbar({ scrolled }: { scrolled: boolean }) {
 
           {/* Hamburger Icon */}
           <div className="sm:hidden">
-            <Sheet>
-              <SheetTrigger asChild>
+            <button onClick={toggleMenu} aria-label="Toggle menu">
+              {menuOpen ? (
+                <AiOutlineClose className="text-white text-3xl" />
+              ) : (
                 <AiOutlineMenu className="text-white text-3xl" />
-              </SheetTrigger>
-              <SheetContent>
-                <div className="flex flex-col mt-12 items-start space-y-8">
-                  <button className="text-white text-xl">About Us</button>
-                  <button className="text-white text-xl">Blog</button>
-                  <button className="text-white text-xl">Services</button>
-                  <button className="text-white text-xl">Contact</button>
-                  <BookNow />
-                </div>
-              </SheetContent>
-            </Sheet>
+              )}
+            </button>
           </div>
 
           {/* Desktop Menu Items */}
@@ -67,6 +50,17 @@ export default function Navbar({ scrolled }: { scrolled: boolean }) {
             <BookNow />
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {menuOpen && (
+          <div className="fixed right-0 left-0 bg-gray-900 text-white flex flex-col justify-center items-center space-y-8 z-40">
+            <button className="text-black text-2xl">About Us</button>
+            <button className="text-black text-2xl">Blog</button>
+            <button className="text-black text-2xl">Services</button>
+            <button className="text-black text-2xl">Contact</button>
+            <BookNow />
+          </div>
+        )}
       </Wrapper>
     </nav>
   );

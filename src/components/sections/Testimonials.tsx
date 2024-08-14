@@ -6,8 +6,8 @@ export default function Testimonials() {
   return (
     <section>
       <Wrapper>
-        <div className="pt-28">
-          <h1 className="text-5xl text-[#4B1D8C] font-semibold">
+        <div className="pt-20 md:pt-28">
+          <h1 className="text-3xl sm:text-5xl text-[#4B1D8C] font-semibold text-center">
             Testimonials
           </h1>
           <div className="w-full space-x-8 flex items-center overflow-hidden mt-14 group">

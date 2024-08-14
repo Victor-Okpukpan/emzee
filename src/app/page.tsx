@@ -2,6 +2,7 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Achievements from "@/components/sections/Achievements";
+import { FAQ } from "@/components/sections/FAQ";
 import Hero from "@/components/sections/Hero";
 import Partners from "@/components/sections/Partners";
 import Specialty from "@/components/sections/Specialty";
@@ -42,6 +43,7 @@ export default function Home() {
       <Testimonials />
       <Partners />
       <Specialty />
+      <FAQ />
       <Footer />
     </main>
   );
