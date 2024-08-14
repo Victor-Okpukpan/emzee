@@ -10,7 +10,7 @@ export default function Services() {
             Our Services
           </h1>
 
-          <div className="flex flex-col-reverse md:flex-row items-center gap-6">
+          <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="flex-1">
               <p className="text-[#200123] mb-3 font-semibold text-2xl">
                 Public Relations
@@ -42,7 +42,7 @@ export default function Services() {
             </div>
           </div>
 
-          <div className="flex items-center flex-col-reverse md:flex-row mt-16 gap-6">
+          <div className="flex items-center flex-col md:flex-row mt-16 gap-6">
             <div className="flex-1">
               <p className="text-[#200123] font-semibold text-2xl mb-3">Marketing</p>
 
