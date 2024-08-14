@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 // import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "EzeeMedia",
     description: "Driving brands and businesses to the pinnacle of success.",
-  }
+  },
 };
 
 export default function RootLayout({
@@ -55,7 +55,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={polysansTrial.className}>{children}</body>
+      <body className={polysansTrial.className}>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

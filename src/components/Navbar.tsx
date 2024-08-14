@@ -3,19 +3,11 @@ import { useState } from "react";
 import Image from "next/image";
 import BookNow from "./buttons/BookNow";
 import Wrapper from "./Wrapper";
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetDescription,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"; // Import icons
+import Link from "next/link";
 
-export default function Navbar({ scrolled }: { scrolled: boolean }) {
+export default function Navbar({ scrolled }: { scrolled?: boolean }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -48,10 +40,18 @@ export default function Navbar({ scrolled }: { scrolled: boolean }) {
               </SheetTrigger>
               <SheetContent>
                 <div className="flex flex-col mt-12 items-start space-y-8">
-                  <button className="text-white text-xl">About Us</button>
-                  <button className="text-white text-xl">Blog</button>
-                  <button className="text-white text-xl">Services</button>
-                  <button className="text-white text-xl">Contact</button>
+                  <Link href="/about" className="text-white text-xl">
+                    About Us
+                  </Link>
+                  <Link href="/blog" className="text-white text-xl">
+                    Blog
+                  </Link>
+                  <Link href="/our-services" className="text-white text-xl">
+                    Services
+                  </Link>
+                  <Link href="/contact-us" className="text-white text-xl">
+                    Contact
+                  </Link>
                   <BookNow />
                 </div>
               </SheetContent>
@@ -60,10 +60,18 @@ export default function Navbar({ scrolled }: { scrolled: boolean }) {
 
           {/* Desktop Menu Items */}
           <div className="hidden sm:flex items-center space-x-16">
-            <button className="text-white text-xl">About Us</button>
-            <button className="text-white text-xl">Blog</button>
-            <button className="text-white text-xl">Services</button>
-            <button className="text-white text-xl">Contact</button>
+            <Link href="/about" className="text-white text-xl">
+              About Us
+            </Link>
+            <Link href="/blog" className="text-white text-xl">
+              Blog
+            </Link>
+            <Link href="/our-services" className="text-white text-xl">
+              Services
+            </Link>
+            <Link href="/contact-us" className="text-white text-xl">
+              Contact
+            </Link>
             <BookNow />
           </div>
         </div>

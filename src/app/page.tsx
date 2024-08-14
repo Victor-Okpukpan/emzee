@@ -1,5 +1,4 @@
 "use client";
-import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Achievements from "@/components/sections/Achievements";
 import { FAQ } from "@/components/sections/FAQ";
@@ -46,7 +45,7 @@ export default function Home() {
       <Services />
       <Specialty />
       <FAQ />
-      <Footer />
+      
     </main>
   );
 }
