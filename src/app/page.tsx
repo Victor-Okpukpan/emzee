@@ -10,32 +10,32 @@ import Testimonials from "@/components/sections/Testimonials";
 import { useState, useEffect } from "react";
 
 export default function Home() {
-  const [scrolled, setScrolled] = useState(false);
+  // const [scrolled, setScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const heroSectionHeight =
-        document.getElementById("hero-section")!.offsetHeight;
-      const scrollPosition = window.scrollY;
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const heroSectionHeight =
+  //       document.getElementById("hero-section")!.offsetHeight;
+  //     const scrollPosition = window.scrollY;
 
-      if (scrollPosition > heroSectionHeight) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
+  //     if (scrollPosition > heroSectionHeight) {
+  //       setScrolled(true);
+  //     } else {
+  //       setScrolled(false);
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   // Cleanup the event listener on component unmount
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
-    <main className="">
-      <Navbar scrolled={scrolled} />
+    <main className="flex items-center justify-center min-h-screen">
+      {/* <Navbar scrolled={scrolled} />
       <section id="hero-section">
         <Hero />
       </section>
@@ -44,8 +44,8 @@ export default function Home() {
       <Partners />
       <Services />
       <Specialty />
-      <FAQ />
-      
+      <FAQ /> */}
+      <h1 className="text-4xl text-center text-black font-bold">Closed down until devs have been paid</h1>
     </main>
   );
 }
